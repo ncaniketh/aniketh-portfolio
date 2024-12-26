@@ -5,10 +5,13 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #000000; /* Black background for the entire page */
+  color: #FFFFFF; /* White text for readability */
 }
 
 html {
@@ -16,7 +19,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: #FFFFFF; /* White text for paragraphs */
 }
 
 /* TRANSITION */
@@ -46,13 +49,13 @@ nav {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
   text-decoration-color: white;
 }
 
 a:hover {
-  color: grey;
+  color: rgb(243, 243, 243);
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
@@ -89,7 +92,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transition: all 0.3 ease-in-out;
 }
 
@@ -97,7 +100,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: black;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -109,7 +112,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: white; /* White text for menu links */
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -150,14 +153,19 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+  background-color: #000000; /* Black background for sections */
 }
 
 .section-container {
   display: flex;
+  color: #FFFFFF; /* White text inside sections */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 /* PROFILE SECTION */
@@ -168,13 +176,14 @@ section {
   gap: 5rem;
   height: 80vh;
 }
+
 .section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
   margin: auto 0;
-  border-radius: 50%; /* This makes the container round */
-  overflow:hidden; /* This ensures that the content inside the container doesn't overflow */
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .section__text {
@@ -228,11 +237,12 @@ section {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  color: white; /* White text for buttons */
 }
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(6, 6, 6) 0.1rem solid;
+  border: white 0.1rem solid; /* White border */
 }
 
 .btn-color-1:hover,
@@ -242,12 +252,12 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
+  background: #333333; /* Dark grey background on hover */
   color: white;
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: #000000; /* Pure black background on hover */
 }
 
 .btn-color-2 {
@@ -255,11 +265,7 @@ section {
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
-
-.btn-container {
-  gap: 1rem;
+  border: white 0.1rem solid;
 }
 
 /* ABOUT SECTION */
@@ -297,11 +303,12 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: rgb(0, 0, 0);
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  color: rgb(255, 255, 255); /* Black text inside white details container */
 }
 
 .section-container {
@@ -322,7 +329,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -330,6 +337,7 @@ section {
 
 .experience-details-container {
   display: flex;
+  color: rgb(0, 0, 0);
   justify-content: center;
   flex-direction: column;
 }
@@ -357,23 +365,28 @@ article .icon {
 #previous-clients {
   padding: 4vh 0;
   text-align: center;
+  background-color: #000000; /* Dark background for the section */
+  color: #ffffff; /* White text for visibility */
 }
-
 
 .client-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap; /* Ensure items wrap in smaller screens */
 }
 
 .client {
   flex: 1;
-  background-color: white;
+  background-color: #000000; /* Darker client card background */
   border-radius: 2rem;
   padding: 1.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Lighter shadow for contrast */
   text-align: center;
+  color: #fbfbfb; /* White text inside the client card */
+  width: 200px; /* Define width for client cards */
+  margin: 1rem; /* Space between client cards */
 }
 
 .client-img {
@@ -391,6 +404,7 @@ article .icon {
   }
 }
 
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -398,24 +412,25 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: rgb(254, 254, 254);
+  background: rgb(0, 0, 0); /* Dark background for project section */
 }
 
 .project-img {
   border-radius: 2rem;
   width: 80%;
   height: 80%;
+  margin: auto; /* Ensure images are centered */
 }
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: white; /* White text for project titles */
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(0, 0, 0);
+  color: white; /* White text for project button */
+  border-color: rgb(255, 255, 255); /* White border for project button */
 }
 
 /* CONTACT */
@@ -424,47 +439,15 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   height: 70vh;
+  background-color: #000000; /* Darker background for better contrast */
 }
 
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
-}
-
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
-}
-
-.contact-info-container p {
-  font-size: larger;
-}
-
-.contact-icon {
-  cursor: default;
-}
-
-.email-icon {
-  height: 2.5rem;
-}
-
-/* FOOTER SECTION */
-
-footer {
-  height: 26vh;
-  margin: 0 1rem;
-}
-
-footer p {
-  text-align: center;
-}
+  border: rgb(255, 255, 255) 0.1rem solid;
+  border-color: rgb(0, 0, 0);
+  background
